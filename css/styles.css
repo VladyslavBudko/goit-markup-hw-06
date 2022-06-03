@@ -407,14 +407,28 @@ body {
   padding: 0;
 
   background-color: var(--primary-color);
+
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition: border var(--animation);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   cursor: pointer;
   border: 1px solid var(--accent-color);
+
+}
+
+.modal-btn-svg {
+  fill: var(--icon-main-color);
+  transition: fill var(--animation);
+}
+
+.modal-btn:hover .modal-btn-svg,
+.modal-btn:focus .modal-btn-svg {
+  fill: var(--accent-color);
 }
 
 /* Modal form*/
@@ -440,6 +454,10 @@ body {
   margin-bottom: 40px;
 }
 
+.form-modal-group {
+  position: relative;
+}
+
 .form-modal-label {
   display: block;
 
@@ -455,21 +473,30 @@ body {
   padding: 12px 40px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border var(--animation);
   border-radius: 4px;
   outline: transparent;
 }
 
-.form-modal-group {
-  position: relative;
+.form-modal-input:focus {
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
 }
 
 .form-modal-icon {
   position: absolute;
   left: 12px;
-  bottom: 12px;
+  top: 50%;
+  fill: #212121;
+  transition: fill var(--animation);
 }
 
-/* Custon Checkbox */
+.form-modal-input:focus+.form-modal-icon {
+  fill: var(--accent-color);
+}
+
+
+/* Custom Checkbox */
 
 .form-policy-group {
   display: flex;
@@ -596,9 +623,6 @@ body {
 
   left: 0;
   bottom: 0;
-
-  /* justify-content: center;
-  align-items: center; */
 
   width: 100%;
   height: 70px;
