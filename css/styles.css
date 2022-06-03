@@ -362,14 +362,14 @@ body {
   visibility: hidden;
 }
 
-.modal {
+.modal-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   width: 528px;
-  height: 581px;
+
   background-color: var(--primary-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -380,16 +380,17 @@ body {
 
 /* Начало открытия окна */
 
-.backdrop.is-hidden .modal {
+.backdrop.is-hidden .modal-wrapper {
   transform: translate(-50%, -50%) scale(0.3);
   opacity: 0;
 }
 
 /* Окончание открытия */
 
-.backdrop .modal {
+.backdrop .modal-wrapper {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
+  padding: 40px;
 }
 
 .modal-btn {
@@ -415,6 +416,20 @@ body {
 .modal-btn:focus {
   cursor: pointer;
   border: 1px solid var(--accent-color);
+}
+
+/* Modal form*/
+
+.form-title {
+  display: block;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
 }
 
 /* Особенности features  */

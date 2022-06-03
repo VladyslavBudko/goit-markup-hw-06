@@ -85,12 +85,64 @@
 
       <!-- Модальное окно -->
       <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
+        <div class="modal-wrapper">
           <button class="modal-btn" type="button" data-modal-close>
             <svg class="modal-btn-svg" width="11" height="11">
               <use href="./icons/sprite.svg#modal-btn"></use>
             </svg>
           </button>
+
+          <strong class="form-title"
+            >Оставьте свои данные, мы вам перезвоним</strong
+          >
+          <form class="modal-form">
+            <!-- Дані відвідувача-->
+            <label class="form-group">
+              <span class="form-label">Имя</span>
+              <input class="form-input" type="text" name="user-name" />
+              <span class="warning"></span>
+              <span class="error"></span>
+              <svg class="form-icon">
+                <use></use>
+              </svg>
+            </label>
+            <label class="form-group">
+              <span class="form-label">Телефон</span>
+              <input class="form-input" type="phone" name="user-phone" />
+              <span class="warning"></span>
+              <span class="error"></span>
+              <svg class="form-icon">
+                <use></use>
+              </svg>
+            </label>
+            <label class="form-group">
+              <span class="form-label">Почта</span>
+              <input class="form-input" type="mail" name="user-mail" />
+              <span class="warning"></span>
+              <span class="error"></span>
+              <svg class="form-icon">
+                <use></use>
+              </svg>
+            </label>
+
+            <label class="form-policy-group">
+              <input type="checkbox" />
+              <span class="custom-checkbox">
+                <svg class="custom-checkbox-icon">
+                  <use href=""></use>
+                </svg>
+
+                <!-- Політика приватності -->
+              </span>
+              <span class="form-policy-desc"
+                >Соглашаюсь с рассылкой и принимаю Условия договора</span
+              >
+            </label>
+
+            <button class="btn btn-mode-light submit-btn" type="submit">
+              Отправить
+            </button>
+          </form>
         </div>
       </div>
 
@@ -619,6 +671,6 @@
     </footer>
 
     <!-- Script -->
-    <script src="./js/modal.js"></script>
+    <script src="./js/modal-wrapper.js"></script>
   </body>
 </html>
