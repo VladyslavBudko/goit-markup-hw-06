@@ -471,16 +471,42 @@ body {
 
 /* Custon Checkbox */
 
-.custom-checkbox {
+.form-policy-group {
   display: flex;
-  /* width: 16px;
-  height: 15px; */
-
   align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
-.custom-checkbox-icon {}
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+
+  margin-right: 8px;
+  outline-offset: -2px;
+}
+
+.custom-checkbox-icon {
+  opacity: 1;
+  transition: opacity var(--animation);
+}
+
+.checkbox:checked+.custom-checkbox .custom-checkbox-icon {
+  opacity: 0;
+}
+
+.custom-checkbox-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  border-radius: 2px;
+  transition: opacity var(--animation);
+}
+
+.checkbox:checked~.custom-checkbox .custom-checkbox-mark {
+  opacity: 1;
+}
 
 .form-policy-desc {
   display: flex;
