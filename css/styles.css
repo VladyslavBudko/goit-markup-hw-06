@@ -419,6 +419,13 @@ body {
 
 /* Modal form*/
 
+.form-modal-group,
+.form-title,
+.form-policy-group {
+  display: block;
+  margin-bottom: 30px;
+}
+
 .form-title {
   display: block;
 
@@ -429,14 +436,64 @@ body {
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
+
+  margin-bottom: 40px;
 }
 
-.form-modal-group,
-.form-title,
-.form-policy-group {
+.form-modal-label {
   display: block;
-  margin-bottom: 30px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--text-description-color);
+  margin-bottom: 4px;
 }
+
+.form-modal-input {
+  width: 100%;
+  padding: 12px 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+}
+
+.form-modal-group {
+  position: relative;
+}
+
+.form-modal-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+}
+
+/* Custon Checkbox */
+
+.custom-checkbox {
+  display: flex;
+  /* width: 16px;
+  height: 15px; */
+
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-checkbox-icon {}
+
+.form-policy-desc {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: 0.03em;
+
+  color: var(--text-description-color);
+}
+
 
 /* Особенности features  */
 
