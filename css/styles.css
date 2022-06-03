@@ -431,7 +431,7 @@ body {
   color: var(--primary-text-color);
 }
 
-.form-group,
+.form-modal-group,
 .form-title,
 .form-policy-group {
   display: block;
