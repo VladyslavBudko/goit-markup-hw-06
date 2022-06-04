@@ -515,8 +515,8 @@ body {
 
   width: 200px;
   height: 50px;
-  /* 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   margin-left: auto;
   margin-right: auto;
@@ -779,10 +779,7 @@ body {
   cursor: pointer;
 }
 
-
-
 /* Clients icon */
-
 
 .clients-list {
   display: flex;
@@ -919,6 +916,69 @@ body {
   fill: var(--primary-color);
   cursor: pointer;
 }
+
+/* Footer E-mail form */
+.footer-mail-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-group {
+  margin-right: 12px;
+}
+
+.footer-input {
+  width: 100%;
+  padding: 15px 0 15px 16px;
+
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: var(--hero-background)
+}
+
+.footer-input:focus {
+  cursor: pointer;
+  border: 1px solid var(--accent-color);
+}
+
+.footer-mail-title {
+  margin-right: 10px;
+}
+
+.footer-mail-btn {
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+  text-decoration: none;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  font-size: 16px;
+  border: 0;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 50px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-mail-btn:hover,
+.footer-mail-btn:focus {
+  background-color: var(--hero-button-hover);
+}
+
 
 
 /* ---------------------------------------------
