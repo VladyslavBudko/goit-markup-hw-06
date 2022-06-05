@@ -932,6 +932,11 @@ footer
   align-items: center;
 }
 
+.footer-mail {
+  margin-left: auto;
+}
+
+
 .footer-group {
   margin-right: 12px;
 }
