@@ -840,7 +840,9 @@ body {
   fill: var(--accent-color);
 }
 
-/* footer */
+/* =========
+footer 
+=============*/
 
 .footer {
   background-color: var(--hero-background);
@@ -944,10 +946,12 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  background: var(--hero-background)
+  background: var(--hero-background);
+  color: var(--primary-background);
 }
 
-.footer-input:focus {
+.footer-input:focus,
+.footer-input:hover {
   cursor: pointer;
   border: 1px solid var(--accent-color);
 }
