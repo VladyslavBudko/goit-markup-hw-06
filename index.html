@@ -105,6 +105,7 @@
                 type="text"
                 name="user-name"
                 placeholder="Введите имя"
+                autofocus
               />
               <svg class="form-modal-icon" width="18" height="18">
                 <use href="./icons/modal-icons.svg#icon-person"></use>
@@ -138,28 +139,25 @@
               </svg>
             </label>
 
-            <label class="form-modal-group">
+            <label class="form-modal-textarea">
               <span class="form-modal-label">Комментарий</span>
               <textarea
                 class="form-modal-input user-message"
                 name="user-message"
                 id="user-message"
                 rows="5"
-                placeholder="Введите текст"
+                placeholder="Оставьте комментарий"
               ></textarea>
             </label>
 
             <label class="form-policy-group">
-              <input class="checkbox visually-hidden" type="checkbox" />
-              <span class="custom-checkbox">
-                <svg class="custom-checkbox-icon" width="16" height="15">
-                  <use
-                    href="./icons/modal-icons.svg#icon-custom-checkbox"
-                  ></use>
-                </svg>
-              </span>
+              <input
+                class="checkbox visually-hidden"
+                type="checkbox"
+                tabindex="-1"
+              />
 
-              <span class="custom-checkbox">
+              <span class="custom-checkbox" tabindex="0" role="checkbox">
                 <svg class="custom-checkbox-mark" width="16" height="15">
                   <use href="./icons/modal-icons.svg#icon-check"></use>
                 </svg>
@@ -167,8 +165,8 @@
               <!-- Політика приватності -->
 
               <span class="form-policy-desc"
-                >Соглашаюсь с рассылкой и принимаю
-                <a href="#"> Условия договора</a></span
+                >Соглашаюсь с рассылкой и принимаю &#160
+                <a class="form-policy-a" href="#">Условия договора</a></span
               >
             </label>
 

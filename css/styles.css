@@ -435,8 +435,9 @@ body {
  Modal form
  ==================*/
 
-.form-modal-group,
-.form-policy-group {
+.form-modal-group {
+  position: relative;
+
   display: block;
   margin-bottom: 10px;
 }
@@ -453,10 +454,6 @@ body {
   color: var(--primary-text-color);
 
   margin-bottom: 12px;
-}
-
-.form-modal-group {
-  position: relative;
 }
 
 .form-modal-label {
@@ -476,7 +473,6 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   transition: border var(--animation);
   border-radius: 4px;
-  outline: transparent;
 }
 
 .form-modal-input:focus {
@@ -493,7 +489,7 @@ body {
   position: absolute;
   left: 12px;
   top: 50%;
-  fill: #212121;
+  fill: var(--primary-text-color);
   transition: fill var(--animation);
 }
 
@@ -502,6 +498,13 @@ body {
 }
 
 .form-modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 50px;
+
   color: var(--primary-color);
   background-color: var(--accent-color);
   text-decoration: none;
@@ -515,22 +518,22 @@ body {
   border: 0;
   border-radius: 4px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 200px;
-  height: 50px;
-
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   margin-left: auto;
   margin-right: auto;
+
+  transition: background-color var(--animation);
 }
 
 .form-modal-btn:hover,
 .form-modal-btn:focus {
   background-color: var(--hero-button-hover);
+}
+
+.form-modal-textarea {
+  display: block;
+  margin-bottom: 30px;
 }
 
 /* Custom Checkbox */
@@ -544,27 +547,38 @@ body {
 .custom-checkbox {
   display: flex;
   align-items: center;
-
+  justify-content: center;
+  margin-left: 10px;
   margin-right: 8px;
-  outline-offset: -2px;
+
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+
+  transition: border var(--animation);
 }
 
-.custom-checkbox-icon {
-  opacity: 1;
-  transition: opacity var(--animation);
+.form-policy-group {
+  display: flex;
+  margin-bottom: 30px;
 }
 
-.checkbox:checked+.custom-checkbox .custom-checkbox-icon {
-  opacity: 0;
+.form-policy-group:hover .custom-checkbox,
+.form-policy-group:focus .custom-checkbox,
+.checkbox:checked+.custom-checkbox {
+  border: 2px solid var(--accent-color);
 }
 
 .custom-checkbox-mark {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
 
+  margin-left: 10px;
   border-radius: 2px;
+
+  opacity: 0;
   transition: opacity var(--animation);
 }
 
@@ -584,6 +598,9 @@ body {
   color: var(--text-description-color);
 }
 
+.form-policy-a {
+  text-decoration: underline;
+}
 
 /* Особенности features  */
 
@@ -1147,7 +1164,7 @@ footer
 
   opacity: 0;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--animation), opacity var(--animation);
 }
 
