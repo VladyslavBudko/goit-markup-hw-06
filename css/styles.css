@@ -533,7 +533,7 @@ body {
 
 .form-modal-textarea {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* Custom Checkbox */
@@ -600,6 +600,7 @@ body {
 
 .form-policy-a {
   text-decoration: underline;
+  color: var(--accent-color);
 }
 
 /* Особенности features  */
