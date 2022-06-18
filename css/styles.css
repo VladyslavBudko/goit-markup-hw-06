@@ -568,8 +568,8 @@ body {
   margin-bottom: 30px;
 }
 
-.checkbox:checked+.custom-checkbox {
-  border: 2px solid var(--accent-color);
+.checkbox:focus+.custom-checkbox {
+  border-color: var(--accent-color);
 }
 
 .custom-checkbox-mark {
