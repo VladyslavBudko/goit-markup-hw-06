@@ -191,12 +191,12 @@ body {
 @keyframes header-current {
   0% {
     transform: scaleX(0);
-    transform: opacity: 0;
+    transform: opacity 0;
   }
 
   100% {
     transform: scaleX(1);
-    transform: opacity: 1;
+    transform: opacity 1;
   }
 }
 
